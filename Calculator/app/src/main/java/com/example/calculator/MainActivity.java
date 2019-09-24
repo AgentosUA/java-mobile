@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.math.*;
+import android.util.Log;
+
 public class MainActivity extends AppCompatActivity {
 
     private CalculatorModel calculator;
@@ -15,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BigDecimal x = new BigDecimal("1.3");
+        System.out.println(x);
+
+        Log.wtf("asdas", "123123");
 
         int[] numbersIds = new int[] {
                 R.id.zero,
@@ -36,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 R.id.division,
                 R.id.equals
         };
-
 
         text = findViewById(R.id.text);
 

@@ -94,7 +94,6 @@ public class CalculatorModel {
                     inputStr.append(firstArg / secondArg);
                     break;
             }
-
         } else if (inputStr.length() > 0 && state == State.firstArgInput) {
             firstArg = Integer.parseInt(inputStr.toString());
             state = State.operationSelected;
@@ -139,7 +138,6 @@ public class CalculatorModel {
             case R.id.division:
             default:
                 return '/';
-
         }
     }
 
