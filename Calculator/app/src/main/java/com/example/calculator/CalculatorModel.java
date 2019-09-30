@@ -17,7 +17,8 @@ public class CalculatorModel {
         firstArgInput,
         operationSelected,
         secondArgInput,
-        resultShow
+        resultShow,
+        clearArgInput
     }
 
     public CalculatorModel() {
@@ -26,10 +27,10 @@ public class CalculatorModel {
 
     public void onNumPressed(int buttonId) {
 
-        if (state == State.resultShow) {
-            state = State.firstArgInput;
-            inputStr.setLength(0);
-        }
+//        if (state == State.resultShow) {
+//            state = State.firstArgInput;
+//            inputStr.replace(0, inputStr.length(), );
+//        }
 
         if (state == State.operationSelected) {
             state = State.secondArgInput;
@@ -76,6 +77,11 @@ public class CalculatorModel {
     }
 
     public void onActionPressed(int actionId) {
+        if(actionId == R.id.clear) {
+
+            int inputStrLength = inputStr.length();
+            inputStr.replace(0, inputStrLength, "");
+        }
         if (actionId == R.id.equals && state == State.secondArgInput && inputStr.length() > 0) {
             secondArg = Integer.parseInt(inputStr.toString());
             state = State.resultShow;
@@ -92,6 +98,9 @@ public class CalculatorModel {
                     break;
                 case R.id.division:
                     inputStr.append(firstArg / secondArg);
+                    break;
+                case R.id.clear:
+                    inputStr.replace(0, inputStr.length(), "");
                     break;
             }
         } else if (inputStr.length() > 0 && state == State.firstArgInput) {

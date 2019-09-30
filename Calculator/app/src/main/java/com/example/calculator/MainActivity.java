@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.minus,
                 R.id.multiply,
                 R.id.division,
-                R.id.equals
+                R.id.equals,
+                R.id.clear
         };
 
         text = findViewById(R.id.text);
