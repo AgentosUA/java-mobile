@@ -1,0 +1,53 @@
+0
+    51
+    &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+
+    &lt;org.opencv.android.JavaCameraView
+    android:layout_centerHorizontal="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/java_camera_view"/&gt;
+
+    &lt;LinearLayout
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"&gt;
+
+    &lt;Button
+    android:id="@+id/btn_str"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:background="@android:color/holo_green_dark"
+    android:text="START"
+    android:textSize="24dp" /&gt;
+
+    &lt;Button
+    android:id="@+id/btn_stp"
+    android:layout_marginTop="20dp"
+    android:layout_width="100dp"
+    android:layout_height="50dp"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:background="@android:color/holo_red_dark"
+    android:text="STOP"
+    android:textSize="24dp" /&gt;
+
+    &lt;/LinearLayout&gt;
+
+
+
+
+    &lt;/RelativeLayout&gt;
